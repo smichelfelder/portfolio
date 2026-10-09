@@ -24,7 +24,7 @@ export type Persona = {
 export type ProcessStep = {
   title: string;
   body: string;
-  image?: { src: string; alt: string; w: number; h: number; caption: string };
+  image?: { src: string; alt: string; w: number; h: number; caption?: string };
 };
 
 export type Decision = {
