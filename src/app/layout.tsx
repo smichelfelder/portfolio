@@ -1,30 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
+import { Stack_Sans_Text, Ultra } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const stackSansText = Stack_Sans_Text({
+  variable: "--font-stack-sans-text",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const ultra = Ultra({
+  variable: "--font-ultra",
+  weight: "400",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Stephanie Michelfelder — Lead Product Designer",
+  title: "Stephanie Michelfelder · Lead Product Designer",
   description:
-    "Lead Product Designer with 10+ years of experience. AI-first design process, shipping production-ready frontend. Designing for Porsche, thyssenkrupp, Bosch & GKN at Workerbase.",
+    "Lead Product Designer with 10+ years of experience. I design AI products and build the frontend in production React. Currently at Workerbase, working with Porsche, thyssenkrupp, Bosch and GKN.",
   openGraph: {
-    title: "Stephanie Michelfelder — Lead Product Designer",
+    title: "Stephanie Michelfelder · Lead Product Designer",
     description:
-      "Lead Product Designer with 10+ years of experience. AI-first design process, shipping production-ready frontend.",
+      "Lead Product Designer with 10+ years of experience. I design AI products and build the frontend in production React.",
     type: "website",
   },
 };
@@ -37,9 +33,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
+      className={`${stackSansText.variable} ${ultra.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }

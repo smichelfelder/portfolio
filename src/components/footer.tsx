@@ -15,14 +15,6 @@ export function Footer() {
             LinkedIn
           </a>
           <a
-            href="https://figma.fun/rUFrwx"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-muted hover:text-foreground transition-colors"
-          >
-            Figma
-          </a>
-          <a
             href="mailto:stephanie.michelfelder@gmail.com"
             className="text-sm text-muted hover:text-foreground transition-colors"
           >
